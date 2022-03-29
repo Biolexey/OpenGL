@@ -26,13 +26,13 @@ class MyCanvas(object):
         self.s = min(self.w, self.h) / self.r
 
     def point(self, x, y):                          #点データの作成
-        return np.array(((x-self.xo) / self.s, (y-self.yo) / self.s))   #※配布資料ではy座標の計算が逆になっているがこちらが正しい
+        return np.array(((x-self.xo) / self.s, (self.yo-y) / self.s))   
 
     def x(self, p):
         return self.s*p[0] + self.xo
 
     def y(self, p):
-        return self.s*p[1] + self.yo
+        return -self.s*p[1] + self.yo   #符号注意
 
     def inside(self, p):                            #描画領域内かの判定
         return 0 <= self.x(p) <= self.w and 0 <= self.y(p) <= self.h

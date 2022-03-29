@@ -1,6 +1,5 @@
 from tkinter import *
 
-from torch import hinge_embedding_loss
 
 W, H = 400, 400
 

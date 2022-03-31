@@ -39,16 +39,3 @@ def display():
         glVertex2dv(points[i])
     glEnd()
     glFlush()
-
-def loop():
-    glutReshapeFunc(reshape)
-    glutDisplayFunc(display)
-    glutMainLoop()
-
-def main():
-    window(W, H)
-    init()
-    loop()
-
-if __name__ == "__main__":
-    main()

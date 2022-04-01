@@ -42,12 +42,12 @@ def reshape(width, height):
     FOV, near, far = 25, 1, 20
     aspect = width / height             #アスペクト比
     glViewport(0, 0, width, height)
-    glMatrixMode(GL_PROJECTION)
+    glMatrixMode(GL_PROJECTION)         #透視投影行列を指定
+    glLoadIdentity()                    #行列の初期化
+    gluPerspective(FOV, aspect, near, far)#透視投影行列の設定関数
+    glMatrixMode(GL_MODELVIEW)          #視野変換行列の指定
     glLoadIdentity()
-    gluPerspective(FOV, aspect, near, far)
-    glMatrixMode(GL_MODELVIEW)
-    glLoadIdentity()
-    gluLookAt(eyeX, eyeY, eyeZ, 0, 0, 0, 0, 1, 0)
+    gluLookAt(eyeX, eyeY, eyeZ, 0, 0, 0, 0, 1, 0)#視点、注視点、画面の上方向ベクトル
 
 def display():
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)

@@ -37,13 +37,13 @@ def display():
         for x in range(LEFT, RIGHT+1):
             dr = (x+1) / (ratio*y)
             ir = int(math.floor(dr))
-            if il == ir:
-                alpha = 1
+            if il == ir:            #左と右端の色が等しい
+                alpha = 1 if ir else 0
             else:
                 alpha = abs(il%2) * (1-(dl-il)) + abs(ir%2) * (dr-ir)
                 for i in range(il+1, ir):
                     alpha += abs(i % 2)
-                alpha /= 1
+                alpha /= ir-il
             glColor4d(1, 1, 1, alpha)
             glVertex2i(x, y)
             dl = dr

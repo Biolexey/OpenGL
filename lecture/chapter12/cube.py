@@ -1,5 +1,9 @@
-from myGLCanvas import MyGLCanvas, getArgs # myGLCanvasモジュールのimport
-from polyhedron import Polyhedron        # polyhedronモジュールのimport
+import sys
+sys.path.append("..")
+#from myGLCanvas import MyGLCanvas, getArgs # myGLCanvasモジュールのimport
+#from polyhedron import Polyhedron        # polyhedronモジュールのimport
+from chapter12.myGLCanvas import MyGLCanvas, getArgs # myGLCanvasモジュールのimport
+from chapter12.polyhedron import Polyhedron        # polyhedronモジュールのimport
 
 class Cube(Polyhedron):                  # Cubeクラスの定義
   def __init__(self):                    # 初期化メソッド

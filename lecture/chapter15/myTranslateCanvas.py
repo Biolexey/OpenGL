@@ -4,8 +4,8 @@ from OpenGL.GLU import *
 from OpenGL.GLUT import *
 sys.path.append("..")
 from chapter13.mySpinCanvas import MySpinCanvas
-from quaternion import Quaternion
-from rotMatrix import RotMatrix
+from chapter15.quaternion import Quaternion
+from chapter15.rotMatrix import RotMatrix
 
 class MyTranslateCanvas(MySpinCanvas):
     def __init__(self):

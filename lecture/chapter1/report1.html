@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+<!-- saved from url=(0071)https://lecture.ecc.u-tokyo.ac.jp/~yama/2022S-ZUGAKU/report_format.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title> Report_Test </title>
+</head>
+<body bgcolor="#ffffff">
+<basefont size="2">
+
+<h3>
+テストレポート (第 1 回)
+</h3>
+
+<div align="right"> <table>
+<tbody><tr><th align="left"> 氏名       </th><td align="left"> 柴田
+</td></tr><tr><th align="left"> クラス     </th><td align="left"> ?? 科 ? 類 ?? 組
+</td></tr><tr><th align="left"> 学生証番号 </th><td align="left"> ???
+</td></tr></tbody></table> </div>
+
+<h3>
+□課題?.? - ?.?節 例 ?: ?
+</h3>
+<h4> ○プログラムリスト </h4>
+<code> <pre>
+from tkinter import *
+import sys
+
+W, H = 400, 300
+
+def display(canvas, msg):                   #描画関数
+    """
+    canvas
+    2本の線分と文字列を描画する
+
+    """
+    canvas.create_line((0, 0), (W-1, H-1))
+    canvas.create_line((0, H-1), (W-1, 0))
+    canvas.create_text((W/2, H/2), text = msg)
+
+def main():
+    if len(sys.argv) > 1:
+        msg = sys.argv[1]
+    else:
+        msg = input("msg = ")
+    root = Tk()
+    canvas = Canvas(root, width = W, height = H, highlightthickness = 0)
+
+    canvas.pack()
+    display(canvas, msg)
+    root.mainloop()
+
+if __name__ =="__main__":
+    main()
+</pre> </code>
+<h4> ○実行コマンド </h4>
+<samp> <pre>msg = yes
+</pre> </samp>
+<h4> ○実行結果 </h4>
+<samp> <pre>???
+</pre> </samp>
+<img src="https://lecture.ecc.u-tokyo.ac.jp/~yama/2022S-ZUGAKU/report_format.html" width="50%">
+<h4> ○考察 </h4>
+<blockquote>
+???
+</blockquote>
+<p>
+
+</p><h3>
+□課題?.? - ?.?節 例 ?: ?
+</h3>
+<h4> ○プログラムリスト </h4>
+<code> <pre>???
+</pre> </code>
+<h4> ○実行コマンド </h4>
+<samp> <pre>???
+</pre> </samp>
+<h4> ○実行結果 </h4>
+<samp> <pre>???
+</pre> </samp>
+<img src="" width="50%">
+<h4> ○考察 </h4>
+<blockquote>
+???
+</blockquote>
+<p>
+
+</p><h3>
+□課題や授業に関して
+</h3>
+<h4> ○レポート作成に要した時間 </h4>
+<blockquote>
+???
+</blockquote>
+<p>
+</p><h4> ○特に苦労した点 </h4>
+<blockquote>
+???
+</blockquote>
+<p>
+</p><h4> ○授業についての感想や希望 </h4>
+<blockquote>
+???
+</blockquote>
+<p>
+
+
+
+</p></body></html>
